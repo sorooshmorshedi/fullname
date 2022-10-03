@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'django_filters',
     'fullname'
 ]
 CORS_ORIGIN_ALLOW_ALL = True
@@ -93,6 +94,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'server.wsgi.application'
 AUTH_USER_MODEL = 'fullname.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter',
+        'rest_framework.filters.SearchFilter',
+    ),
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

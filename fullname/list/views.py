@@ -7,6 +7,7 @@ from fullname.serializer import UserSerializer
 
 
 class UserListView(generics.ListAPIView):
+
     serializer_class = UserSerializer
     filterset_class = UserFilter
     ordering_fields = '__all__'
