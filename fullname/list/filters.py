@@ -7,7 +7,6 @@ class UserFilter(rest_framework.FilterSet):
     class Meta:
         model = User
         fields = {
-            'first_name': ['exact',  'icontains'],
-            'last_name': ['exact',  'icontains'],
+            'first_name': ['exact', 'icontains'],
+            'last_name': ['exact', 'icontains'],
         }
-
