@@ -3,7 +3,7 @@ from rest_framework.pagination import LimitOffsetPagination
 
 from fullname.list.filters import UserFilter
 from fullname.models import User
-from server.serializer import UserSerializer
+from fullname.serializer import UserSerializer
 
 
 class UserListView(generics.ListAPIView):

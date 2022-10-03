@@ -1,6 +1,6 @@
 from rest_framework.views import APIView
 from fullname.models import User
-from server.serializer import UserSerializer, UserEditSerializer
+from fullname.serializer import UserSerializer, UserEditSerializer
 from rest_framework import status
 from rest_framework.response import Response
 
